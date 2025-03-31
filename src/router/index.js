@@ -7,6 +7,7 @@ import AdminProfile from '../components/AdminProfile.vue'
 import AdminPermissions from '../components/AdminPermissions.vue'
 import AdminLogs from '../components/AdminLogs.vue'
 import AdminDeactivate from '../components/AdminDeactivate.vue'
+import AdminRefreshConfig from '../components/AdminRefreshConfig.vue'
 
 const routes = [
   { path: '/login', component: LoginForm },
@@ -15,7 +16,9 @@ const routes = [
   { path: '/admin/:id/permissions', component: AdminPermissions },
   { path: '/admin/:id/logs', component: AdminLogs },
   { path: '/admin/:id/deactivate', component: AdminDeactivate },
+  { path: '/admin/:id/refresh-config', component: AdminRefreshConfig },
   { path: '/', redirect: '/login' }
+  
 ]
 
 const router = createRouter({

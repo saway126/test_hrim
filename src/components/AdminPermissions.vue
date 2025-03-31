@@ -5,7 +5,7 @@
   
       <PermissionTable
         v-model="permissions"
-        :permissionList="['ESG 지표 관리', '리포트 관리', '시스템 설정', '사용자 관리']"
+        :permissionList="['임원 권한', '관리자 권한', '사원 권한', ]"
       />
     </div>
   </template>
