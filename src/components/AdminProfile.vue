@@ -36,3 +36,22 @@
           탈퇴 처리
         </router-link>
       </nav>
+  
+      <!-- ✅ 프로필 카드 내용 -->
+      <ProfileCard
+        name="홍길동"
+        email="admin@example.com"
+        phone="010-1234-5678"
+        team="인사관리팀"
+        role="시스템 관리자"
+        status="활성"
+        createdAt="2024.03.01"
+        profileImage="/profile.png"
+      />
+    </div>
+  </template>
+  
+  <script setup>
+  import { useRoute } from 'vue-router'
+  import ProfileCard from './ProfileCard.vue'
+  </script>
