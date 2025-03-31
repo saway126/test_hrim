@@ -62,7 +62,7 @@
   <script setup>
   import { ref } from 'vue'
   import ProfileCard from './ProfileCard.vue'
-  import Tabs from './Tabs.vue'
+  import Tabs from './AdminTabs.vue'
   import PermissionTable from './PermissionTable.vue'
   
   const activeTab = ref('권한 설정')
