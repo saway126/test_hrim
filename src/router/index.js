@@ -9,6 +9,9 @@ import AdminLogs from '../components/AdminLogs.vue'
 import AdminDeactivate from '../components/AdminDeactivate.vue'
 import AdminMgmtUpdateCycle from '../components/AdminMgmtUpdateCycle.vue'
 import AdminPartnerCycle from '../components/AdminPartnerCycle.vue'
+import ReportList from '../components/ReportList.vue'
+import ReportDetail from '../components/ReportDetail.vue'
+import EcoProductDetail from '../components/EcoProductDetail.vue'
 
 const routes = [
   { path: '/login', component: LoginForm },
@@ -19,7 +22,10 @@ const routes = [
   { path: '/admin/:id/deactivate', component: AdminDeactivate },
   { path: '/admin/:id/mgmt-update-cycle', component: AdminMgmtUpdateCycle },
   { path: '/admin/:id/partner-cycle', component: AdminPartnerCycle },
-  { path: '/', redirect: '/login' }
+  { path: '/report/list', component: ReportList },
+  { path: '/report/:id', component: ReportDetail },
+  { path: '/', redirect: '/login' },
+  { path: '/eco-product/:id', component: EcoProductDetail }
   
 ]
 
