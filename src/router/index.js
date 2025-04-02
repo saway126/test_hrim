@@ -8,6 +8,7 @@ import AdminPermissionTransferView from '../views/AdminPermissionTransferView.vu
 import AdminLoginView from '../views/AdminLoginView.vue'
 import FindIdView from '../views/FindIdView.vue'
 import ResetPasswordView from '../views/ResetPasswordView.vue'
+import ChangePasswordView from '../views/ChangePasswordView.vue'
 
 
 
@@ -22,7 +23,8 @@ const routes = [
   { path: '/login', component: AdminLoginView },
   { path: '/signup', component: SignUpForm },
   { path: '/find-id', component: FindIdView }, // ✅ 아이디 찾기 라우트 추가
-  { path: '/reset-password', component: ResetPasswordView }
+  { path: '/reset-password', component: ResetPasswordView },
+  { path: '/change-password', component: ChangePasswordView }
   // CompanyRegisterView는 추후 복구
 ]
 
