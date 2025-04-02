@@ -11,6 +11,7 @@ import CompanyRegisterView from '../views/CompanyRegisterView.vue'
 
 
 
+
 const routes = [
   { path: '/login', component: LoginForm },
   { path: '/signup', component: SignUpForm },
