@@ -50,6 +50,11 @@
   <script setup>
   import { ref } from 'vue'
   import BusinessCertModal from '../components/BusinessCertModal.vue'
+  // 정확하게 이렇게 되어 있어야 한다.
+import sampleTrue from '@/assets/sample_cert_true.png'
+import sampleFalse from '@/assets/sample_cert_false.png'
+
+
   
   const showModal = ref(false)
   
