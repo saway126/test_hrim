@@ -4,6 +4,8 @@ import SignUpForm from '../components/SignUpForm.vue'
 import AdminUserApprovalView from '../views/AdminUserApprovalView.vue'
 import AdminUserSearchView from '../views/AdminUserSearchView.vue'
 import AdminPermissionTransferView from '../views/AdminPermissionTransferView.vue'
+import CompanyRegisterView from '../views/CompanyRegisterView.vue'
+
 
 
 
@@ -22,7 +24,13 @@ const routes = [
     path: '/admin/user-permission',
     name: 'admin-user-permission',
     component: AdminPermissionTransferView
+  },
+  {
+    path: '/register/company',
+    name: 'register-company',
+    component: CompanyRegisterView
   }
+  
   
   
  
