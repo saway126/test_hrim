@@ -10,6 +10,7 @@ import FindIdView from '../views/FindIdView.vue'
 import ResetPasswordView from '../views/ResetPasswordView.vue'
 import ChangePasswordView from '../views/ChangePasswordView.vue'
 import HomeView from '../views/HomeView.vue'
+import EmployeeRegisterView from '../views/EmployeeRegisterView.vue'
 
 
 const routes = [
@@ -23,7 +24,8 @@ const routes = [
   { path: '/reset-password', component: ResetPasswordView },
   { path: '/change-password', component: ChangePasswordView },
   { path: '/register/company', component: CompanyRegisterView }, // 만들었다면 사용
-  { path: '/register/employee', component: SignUpForm }
+  { path: '/register/employee', component: SignUpForm },
+  { path: '/register/employee', component: EmployeeRegisterView },
 
 ]
 
