@@ -20,7 +20,7 @@ import AdminPermissionTransferView from '../views/admin/AdminPermissionTransferV
 
 // 활동 인증 관리
 import ActivityManageView from '../views/activity/ActivityManageView.vue'
-import CampaignActivityView from '../views/activity/CampaignActivityView.vue'
+import ActivityCampaignView from '../views/activity/ActivityCampaignView.vue'
 
 // 대시보드
 import DashboardView from '../views/dashboard/DashboardView.vue'
@@ -49,7 +49,7 @@ const routes = [
 
   // 활동 인증
   { path: '/admin/activity-manage', component: ActivityManageView },
-  { path: '/admin/campaign-activity', component: CampaignActivityView },
+  { path: '/admin/activity-campaign', component: ActivityCampaignView },
 
   // 대시보드
   { path: '/dashboard', component: DashboardView },
