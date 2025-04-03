@@ -13,6 +13,7 @@ import HomeView from '../views/HomeView.vue'
 import EmployeeRegisterView from '../views/EmployeeRegisterView.vue'
 import DashboardView from '../views/DashboardView.vue'
 import ActivityManageView from '../views/ActivityManageView.vue'
+import CampaignActivityView from '../views/CampaignActivityView.vue'
 
 
 const routes = [
@@ -30,6 +31,7 @@ const routes = [
   { path: '/register/employee', component: EmployeeRegisterView },
   { path: '/dashboard', component: DashboardView },
   { path: '/admin/activity-manage', name: 'activity-manage', component: ActivityManageView },
+  { path: '/admin/campaign-activity', name: 'CampaignActivity', component: CampaignActivityView },
 
 ]
 
