@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginForm from '../components/LoginForm.vue'
-import SignUpForm from '../components/SignUpForm.vue'
+import SignUpForm from '../components/BusinessCertModal.vue'
 import AdminUserApprovalView from '../views/AdminUserApprovalView.vue'
 import AdminUserSearchView from '../views/AdminUserSearchView.vue'
 import AdminPermissionTransferView from '../views/AdminPermissionTransferView.vue'
-// import CompanyRegisterView from '../views/CompanyRegisterView.vue'
+import CompanyRegisterView from '../views/CompanyRegisterView.vue'
 import AdminLoginView from '../views/AdminLoginView.vue'
 import FindIdView from '../views/FindIdView.vue'
 import ResetPasswordView from '../views/ResetPasswordView.vue'
 import ChangePasswordView from '../views/ChangePasswordView.vue'
 import HomeView from '../views/HomeView.vue'
+
 
 const routes = [
   { path: '/', component: HomeView },
@@ -21,8 +22,9 @@ const routes = [
   { path: '/find-id', component: FindIdView },
   { path: '/reset-password', component: ResetPasswordView },
   { path: '/change-password', component: ChangePasswordView },
-  // { path: '/register/company', component: CompanyRegisterView }, // 만들었다면 사용
+  { path: '/register/company', component: CompanyRegisterView }, // 만들었다면 사용
   { path: '/register/employee', component: SignUpForm }
+
 ]
 
 const router = createRouter({
