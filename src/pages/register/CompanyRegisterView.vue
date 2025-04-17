@@ -39,6 +39,18 @@
       </div>
     </div>
   </div>
+  <!-- 라우터 링크 예시 -->
+  <!-- 실제 사용 시 주석 해제 -->
+  <!-- <router-link :to="{ name: 'productDetail', params: { productId: 1 } }">상품 상세</router-link> -->
+  <!-- <router-link :to="{ name: 'productDetail', params: { productId: 1 } }">상품 상세</router-link> -->
+  <!-- <router-link :to="{ name: 'productDetail', params: { productId: 1 } }">상품 상세</router-link> -->
+  <!-- <router-link :to="{ name: 'productDetail', params: { productId: 1 } }">상품 상세</router-link> -->
+  <!-- <router-link :to="{ name: 'productDetail', params: { productId: 1 } }">상품 상세</router-link> -->
+  <!-- <router-link :to="{ name: 'productDetail', params: { productId: 1 } }">상품 상세</router-link> -->
+  <!-- <router-link :to="{ name: 'productDetail', params: { productId: 1 } }">상품 상세</router-link> --> 
+  <router-link :to="'/products/1'"></router-link>//얘랑
+    <router-link :to="{ name: 'productDetail', params: { productId: 1 } }"></router-link>//얘의 차이 
+
 </template>
 
 <script setup>
