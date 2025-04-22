@@ -55,7 +55,10 @@
 
 <script setup>
 import { ref } from 'vue'
-
+import { useRoute } from 'vue-router';
+const route = useRoute();
+console.log(route.params);
+// console.log(route.params.productId); // 1
 const form = ref({
   name: '',
   username: '',
