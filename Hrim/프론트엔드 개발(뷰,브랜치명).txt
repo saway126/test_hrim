@@ -1,0 +1,50 @@
+브랜치명
+
+
+1.ActivityCampaignListView
+IF-149-fix-campaign-list
+
+
+git fetch                              # 최신 원격 브랜치 정보 가져오기
+git branch -a                          # 브랜치 목록 확인
+git switch -c IF-150-FIX-DESIGN origin/IF-150-FIX-DESIGN	
+
+
+
+
+
+
+
+
+import { createApp } from 'vue'
+import './style.css'
+import App from './App.vue'
+import router from './router'
+import {createPinia} from 'pinia'
+import piniaPersistedstate from "pinia-plugin-persistedstate"
+
+const pinia = createPinia();
+pinia.use(piniaPersistedstate);
+
+
+const app = createApp(App);
+app.use(router);
+app.use(pinia);
+app.mount('#app');
+
+---------------------------------
+
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import './assets/tailwind.css'
+
+createApp(App).use(router).mount('#app')
+
+
+
+
+
+
+
+밤늦게 죄송한데 테일윈드 이거<style scoped> 이렇게 말고 3.4.3으로 다운그레이드 해서 설치해서 쓰는게 맞을거 같아요.. 집에 와서 계속 삽질하면서 해봤는데 scoped으로 하면 좀 깨지거나 호환 안되는게 있더라구요. 더 찾아보거나 비교해봐야겠지만 일단은 3.4.3을 쓰는게 맞는거 같습니다. 만들어주신 vue 파일들 모아서 최대한 수정하고 테스트 해서 내일 3시전까진 제대로 url 타고 들어가지는거 확인하고 픽스할게요. 안녕히 주무세요~
