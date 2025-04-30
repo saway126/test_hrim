@@ -1,35 +1,25 @@
 package com.example.be12hrimimhrbe.domain.activity;
 
 import com.example.be12hrimimhrbe.domain.activity.model.Activity;
-import com.example.be12hrimimhrbe.domain.member.model.Member;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.EntityGraph;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface ActivityRepository extends JpaRepository<Activity, Long> {
-//    @EntityGraph(attributePaths = {"member"})
-//    @Query("SELECT a FROM Activity a " +
-//            "LEFT JOIN a.member m ")
-    Page<Activity> findAllByMember(Member member, Pageable pageable);
+public interface ActivityRepository extends MongoRepository<Activity, String> {
 
-    List<Activity> findAllByMember(Member member);
+    // 사용자별 활동 전체 조회
+    List<Activity> findByMemberId(String memberId);
 
-    @EntityGraph(attributePaths = {"member"})
-    @Query("SELECT a FROM Activity a " +
-            "LEFT JOIN a.member m ")
-    Page<Activity> findAllAndMember(Pageable pageable);
+    // 회사별 활동 전체 조회
+    List<Activity> findByCompanyId(String companyId);
 
-    @EntityGraph(attributePaths = {"member","member.company"})
-    @Query("SELECT a FROM Activity a " +
-            "LEFT JOIN a.member m " +
-            "LEFT JOIN m.company c " +
-            "where a.idx= :idx")
-    Activity findByIdAndMember(Long idx);
+    // 상태 필터링 추가 예시
+    List<Activity> findByCompanyIdAndStatus(String companyId, String status);
 
+    // 페이징 예시
+    Page<Activity> findByCompanyId(String companyId, Pageable pageable);
+
+    Page<Activity> findByStatus(String status, Pageable pageable);
 }

@@ -1,64 +1,33 @@
 package com.example.be12hrimimhrbe.domain.activity.model;
 
-import com.example.be12hrimimhrbe.domain.member.model.Member;
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@Document(collection = "activity")
 @Getter
-@Builder
-@AllArgsConstructor
+@Setter
 @NoArgsConstructor
-@Entity
+@AllArgsConstructor
+@Builder
 public class Activity {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idx;
-
-    @ManyToOne
-    @JoinColumn(name = "member_idx")
-    private Member member;
-
-    @Enumerated(EnumType.STRING)
-    private Type type;
+    private String id;
 
     private String title;
+    private String content;
+    private String memberId;   // 사용자 ID 참조 (Mongo에서는 ID 직접 저장)
+    private String companyId;  // 회사 ID 참조
 
-    @Lob
-    private String description;
+    private int score;
+    private String imagePath;
 
-    private String fileUrl;
+    private String status; // 상태: PENDING, APPROVED, REJECTED
 
-    @Enumerated(EnumType.STRING)
-    private Status status = Status.PENDING;
-
-    // 수행 시간
-    private int performedAt;
-
-    private int donation;
-
-    // 
-    @Column(name = "created_at", updatable = false)
-    private LocalDateTime createdAt ;
-
-
-    public enum Type { VOLUNTEER, DONATION, EDUCATION }
-    public enum Status { PENDING, APPROVED, REJECTED }
-
-    public Activity(Activity activity,Activity.Status update){
-        this.idx = activity.idx;
-        this.member = activity.member;
-        this.type = activity.type;
-        this.title = activity.title;
-        this.description = activity.description;
-        this.fileUrl = activity.fileUrl;
-        this.status = update;
-        this.performedAt = activity.performedAt;
-        this.donation = activity.donation;
-    }
+    @CreatedDate
+    private LocalDateTime createdAt; // 자동 생성 시간
 }
